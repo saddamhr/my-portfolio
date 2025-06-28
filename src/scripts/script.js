@@ -103,7 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Populate Experience
-      const experienceSection = document.querySelector('#experience .experience-list');
+      const experienceSection = document.querySelector(
+        '#experience .experience-list'
+      );
       if (experienceSection) {
         data.experience.forEach((exp) => {
           const expItem = document.createElement('div');
@@ -141,16 +143,31 @@ document.addEventListener('DOMContentLoaded', () => {
           const eduItem = document.createElement('div');
           eduItem.classList.add('education-item');
           eduItem.innerHTML = `
-              <h3>${edu.degree}</h3>
-              <p class="item-meta">${edu.institution} | ${edu.year}</p>
-              ${edu.details.map((detail) => `<p>${detail}</p>`).join('')}
+              <h3><i class="${edu.icon}"></i> ${edu.degree}</h3>
+              <p class="item-meta"> ${edu.institution}</p>
+              <div class="year-location-container">
+                <p> <i class="fas fa-calendar-alt"></i> ${edu.year}</p>
+                <p> <i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+              </div>
+              ${edu.details
+                .map((detail) => {
+                  if (detail.startsWith('Notable Courses:')) {
+                    const parts = detail.split(':');
+                    return `<p class="notable-courses-text"><strong>${parts[0]}:</strong>${parts.slice(1).join(':')}</p>`;
+                  } else {
+                    return `<p>${detail}</p>`;
+                  }
+                })
+                .join('')}
           `;
           educationSection.appendChild(eduItem);
         });
       }
 
       // Populate Social Links
-      const socialIconsContainer = document.querySelector('#find-me-online .social-icons');
+      const socialIconsContainer = document.querySelector(
+        '#find-me-online .social-icons'
+      );
       if (socialIconsContainer) {
         data.socialLinks.forEach((link) => {
           const a = document.createElement('a');

@@ -1,6 +1,7 @@
 /* Global Styles */
 :root {
-  --primary-color: #3b82f6;
+  /* --primary-color: #3b82f6; */
+  --primary-color: #3c6cba;
   --secondary-color: #10b981;
   --text-color: #4b5563;
   --heading-color: #111827;
@@ -74,7 +75,7 @@ body {
 
 .hero-title-large {
   color: var(--primary-color);
-  margin-left: 0.5rem;
+  margin-left: 10px;
 }
 
 .hero-info {
@@ -189,10 +190,7 @@ body {
 /* Skills Section */
 .skill-groups {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(450px, 1fr)
-  ); /* Adjusted for two columns */
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 2rem;
 }
 
@@ -225,7 +223,7 @@ body {
 
 .skills-list li {
   background-color: var(--background-color);
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   border: 1px solid var(--border-color);
   font-weight: 500;
@@ -295,24 +293,145 @@ body {
 
 /* Project Section */
 .project-item {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 2rem; /* Ensure spacing between items */
 }
 
 .project-item:last-child {
   border-bottom: none;
 }
 
-/* Education Section */
-.education-item {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
+.project-item:hover {
+  transform: translateY(-5px);
 }
 
-.education-item:last-child {
-  border-bottom: none;
+.project-item h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.project-item .item-meta a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.project-item .item-meta a:hover {
+  background-color: var(--secondary-color);
+}
+
+.project-item p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* Education Section - Improved design */
+.education-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.education-item {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-item h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.education-item h3 i {
+  color: var(--primary-color);
+}
+
+.year-location-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.education-item .item-meta {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  /* margin-bottom: 1rem; */
+  display: flex; /* Enable flexbox for item-meta */
+  align-items: center; /* Align items vertically */
+  gap: 0.5rem; /* Space between icon and text */
+  font-weight: 600;
+}
+
+.year-location-container p {
+  font-size: 1rem;
+  color: var(--text-color);
+  /* margin-bottom: 1rem; */
+  display: flex; /* Enable flexbox for item-meta */
+  align-items: center; /* Align items vertically */
+  gap: 0.5rem; /* Space between icon and text */
+  margin: 0;
+}
+
+.year-location-container p i {
+  color: var(--primary-color);
+}
+
+.education-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.education-item ul li {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.education-item ul li::before {
+  content: '•';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.notable-courses-text {
+  /* font-weight: 600; */
+  color: var(--heading-color);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* General Item Styles (for h3 and item-meta in Project/Education) */
@@ -326,6 +445,7 @@ h3 {
 .item-meta {
   color: var(--text-color);
   margin-bottom: 1rem;
+  margin: 0;
 }
 
 /* Contact Form */
