@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Safely handle the old responsive navigation function if the element doesn't exist.
   if (document.getElementById('myTopnav')) {
     function myFunction() {
       var x = document.getElementById('myTopnav');
@@ -9,11 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
         x.className = 'topnav';
       }
     }
-    // Make the function globally available if needed, otherwise it can be scoped here.
     window.myFunction = myFunction;
   }
 
-  // Safely handle the contact form submission.
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
@@ -26,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Safely handle the theme switcher logic.
   const themeSwitcher = document.getElementById('theme-switcher');
   if (themeSwitcher) {
     const body = document.body;
@@ -61,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Dynamic content loading from data.json
   fetch('data.json')
     .then((response) => {
       if (!response.ok) {
@@ -70,13 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then((data) => {
-      // Populate About Me
       const aboutContent = document.getElementById('about-content');
       if (aboutContent) {
         aboutContent.textContent = data.personalInfo.aboutMe;
       }
 
-      // Populate Skills
       const skillGroupsContainer = document.querySelector('.skill-groups');
       if (skillGroupsContainer) {
         for (const category in data.skills) {
@@ -102,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Populate Experience
       const experienceSection = document.querySelector(
         '#experience .experience-list'
       );
@@ -121,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      // Populate Projects
       const projectsSection = document.getElementById('projects');
       if (projectsSection) {
         data.projects.forEach((project) => {
@@ -136,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      // Populate Education
       const educationSection = document.getElementById('education');
       if (educationSection) {
         data.education.forEach((edu) => {
@@ -164,9 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      // Populate Social Links
       const socialIconsContainer = document.querySelector(
-        '#find-me-online .social-icons'
+        '.social-icons-contact'
       );
       if (socialIconsContainer) {
         data.socialLinks.forEach((link) => {
@@ -175,12 +164,11 @@ document.addEventListener('DOMContentLoaded', () => {
           a.target = '_blank';
           a.classList.add('social-icon');
           a.setAttribute('aria-label', link.name);
-          a.innerHTML = `<i class="fa ${link.icon}"></i>`;
+          a.innerHTML = `<i class="${link.icon}"></i>`;
           socialIconsContainer.appendChild(a);
         });
       }
 
-      // Populate Footer
       const currentYear = document.getElementById('current-year');
       if (currentYear) {
         currentYear.textContent = new Date().getFullYear();

@@ -1,6 +1,4 @@
-/* Global Styles */
 :root {
-  /* --primary-color: #3b82f6; */
   --primary-color: #3c6cba;
   --secondary-color: #10b981;
   --text-color: #4b5563;
@@ -26,7 +24,6 @@ body {
   padding: 0 2rem;
 }
 
-/* Navigation */
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -53,7 +50,6 @@ body {
   color: var(--primary-color);
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -82,11 +78,20 @@ body {
   margin-bottom: 1rem;
 }
 
+.hero-info span {
+  font-weight: 500;
+}
+
 .hero-location {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 2rem;
+}
+
+.hero-location a {
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .hero-description {
@@ -162,7 +167,6 @@ body {
   font-weight: 500;
 }
 
-/* Main Content */
 .main-content {
   padding: 4rem 0;
 }
@@ -180,14 +184,12 @@ body {
   padding-bottom: 1rem;
 }
 
-/* About Me Section */
 #about-content {
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--text-color);
 }
 
-/* Skills Section */
 .skill-groups {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -237,7 +239,6 @@ body {
   color: var(--primary-color);
 }
 
-/* Experience Section - Improved design */
 .experience-list {
   display: grid;
   gap: 2rem;
@@ -291,7 +292,6 @@ body {
   line-height: 1.6;
 }
 
-/* Project Section */
 .project-item {
   background-color: var(--card-background);
   padding: 2rem;
@@ -299,7 +299,7 @@ body {
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease-in-out;
-  margin-bottom: 2rem; /* Ensure spacing between items */
+  margin-bottom: 2rem;
 }
 
 .project-item:last-child {
@@ -339,7 +339,6 @@ body {
   color: var(--text-color);
 }
 
-/* Education Section - Improved design */
 .education-list {
   display: grid;
   gap: 2rem;
@@ -384,20 +383,18 @@ body {
 .education-item .item-meta {
   font-size: 1.5rem;
   color: var(--primary-color);
-  /* margin-bottom: 1rem; */
-  display: flex; /* Enable flexbox for item-meta */
-  align-items: center; /* Align items vertically */
-  gap: 0.5rem; /* Space between icon and text */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 600;
 }
 
 .year-location-container p {
   font-size: 1rem;
   color: var(--text-color);
-  /* margin-bottom: 1rem; */
-  display: flex; /* Enable flexbox for item-meta */
-  align-items: center; /* Align items vertically */
-  gap: 0.5rem; /* Space between icon and text */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin: 0;
 }
 
@@ -428,13 +425,11 @@ body {
 }
 
 .notable-courses-text {
-  /* font-weight: 600; */
   color: var(--heading-color);
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
-/* General Item Styles (for h3 and item-meta in Project/Education) */
 h3 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -448,10 +443,14 @@ h3 {
   margin: 0;
 }
 
-/* Contact Form */
 #contact-form {
   display: grid;
   gap: 1.5rem;
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 #contact-form input,
@@ -476,7 +475,41 @@ h3 {
   resize: vertical;
 }
 
-/* Footer */
+.contact-social-links {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.contact-social-links h3 {
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+.social-icons-contact {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons-contact .social-icon {
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.social-icons-contact .social-icon:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
 footer {
   text-align: center;
   padding: 2rem 0;
@@ -484,7 +517,6 @@ footer {
   color: var(--text-color);
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;

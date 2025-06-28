@@ -227,27 +227,27 @@
         {
             "name": "Email",
             "url": "mailto:saddambubt65@gmail.com",
-            "icon": "fa-envelope"
+            "icon": "fa-solid fa-envelope"
         },
         {
             "name": "LinkedIn",
             "url": "https://linkedin.com/in/saddamhr/",
-            "icon": "fa-linkedin"
+            "icon": "fa-brands fa-linkedin"
         },
         {
             "name": "GitHub",
             "url": "https://github.com/saddamhr",
-            "icon": "fa-github"
+            "icon": "fa-brands fa-github"
         },
         {
             "name": "Medium",
             "url": "https://medium.com/@saddamhr",
-            "icon": "fa-medium"
+            "icon": "fa-solid fa-m"
         },
         {
             "name": "X",
             "url": "https://x.com/saddam_rakib",
-            "icon": "fa-twitter"
+            "icon": "fa-solid fa-x"
         }
     ]
 }
