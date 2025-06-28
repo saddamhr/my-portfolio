@@ -1,12 +1,12 @@
 /* Global Styles */
 :root {
-  --primary-color: #3B82F6;
-  --secondary-color: #10B981;
-  --text-color: #4B5563;
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --text-color: #4b5563;
   --heading-color: #111827;
-  --background-color: #F9FAFB;
-  --card-background: #FFFFFF;
-  --border-color: #E5E7EB;
+  --background-color: #f9fafb;
+  --card-background: #ffffff;
+  --border-color: #e5e7eb;
 }
 
 body {
@@ -74,6 +74,7 @@ body {
 
 .hero-title-large {
   color: var(--primary-color);
+  margin-left: 0.5rem;
 }
 
 .hero-info {
@@ -112,7 +113,7 @@ body {
 }
 
 .social-icon:hover {
-  background-color: #D1D5DB;
+  background-color: #d1d5db;
 }
 
 .btn-primary {
@@ -128,7 +129,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #2563EB;
+  background-color: #2563eb;
 }
 
 .hero-image-container {
@@ -188,7 +189,10 @@ body {
 /* Skills Section */
 .skill-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* Adjusted for two columns */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(450px, 1fr)
+  ); /* Adjusted for two columns */
   gap: 2rem;
 }
 
@@ -330,7 +334,8 @@ h3 {
   gap: 1.5rem;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -340,7 +345,8 @@ h3 {
   box-sizing: border-box;
 }
 
-#contact-form input:focus, #contact-form textarea:focus {
+#contact-form input:focus,
+#contact-form textarea:focus {
   border-color: var(--primary-color);
   outline: none;
 }
@@ -369,7 +375,9 @@ footer {
     margin-bottom: 3rem;
   }
 
-  .hero-info, .hero-location, .hero-buttons {
+  .hero-info,
+  .hero-location,
+  .hero-buttons {
     justify-content: center;
   }
 }
