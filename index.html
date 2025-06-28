@@ -4,81 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jane Doe - CV</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Md. Saddam Hossain - Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="src/styles/style.css">
 </head>
 
 <body>
-    <nav id="myTopnav" class="topnav">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#find-me-online">Find Me Online</a></li>
-            <li><a href="javascript:void(0);" id="theme-switcher"><i class="fa fa-moon-o"></i></a></li>
-        </ul>
-    </nav>
+    <div class="page-container">
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="#" class="name">Md. Saddam Hossain</a>
+            </div>
+            <div class="nav-right">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
 
-    <div class="container">
-        <header id="dynamic-header">
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Senior Frontend<br><span class="hero-title-large">Engineer</span></h1>
+                <div class="hero-info">
+                    <span>React • Next.js • TypeScript • 8+ Years Experience</span>
+                </div>
+                <div class="hero-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Dhaka, Bangladesh</span>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+8801966798761</span>
+                </div>
+                <p class="hero-description">
+                    I am a software engineer with a passion for problem-solving and a relentless curiosity for learning.
+                    Through hard work, dedication, and unwavering persistence, I am committed to discovering effective
+                    solutions to intricate challenges.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://linkedin.com/in/saddamhr/" target="_blank" class="social-icon"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:saddambubt65@gmail.com" class="social-icon"><i class="far fa-envelope"></i></a>
+                    <a href="assets/Md_Saddam_Hossain_CV.pdf" download class="btn-primary">Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image">
+                    <img src="image.png" alt="Profile Picture">
+                    <div class="experience-badge">8+ Years</div>
+                </div>
+            </div>
         </header>
 
-        <div class="section" id="about">
-            <h2>About Me</h2>
-            <p id="about-content"></p>
-        </div>
-
-        <div class="section" id="skills">
-            <h2>Skills</h2>
-            <ul id="skills-list">
-            </ul>
-        </div>
-
-        <div class="section" id="experience">
-            <h2>Experience</h2>
-        </div>
-
-        <div class="section" id="projects">
-            <h2>Projects</h2>
-        </div>
-
-        <div class="section" id="education">
-            <h2>Education</h2>
-        </div>
-
-        <div class="section" id="contact">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <div id="thank-you-message" style="display:none;">
-                <p>Thank you for your message!</p>
+        <main class="main-content">
+            <div class="section" id="about">
+                <h2>About Me</h2>
+                <p id="about-content"></p>
             </div>
-        </div>
 
-        <div class="section social-links" id="find-me-online">
-            <h2>Find Me Online</h2>
-            <div class="social-icons">
+            <div class="section" id="skills">
+                <h2>Skills</h2>
+                <div class="skill-groups">
+                </div>
             </div>
-        </div>
+
+            <div class="section" id="experience">
+                <h2>Experience</h2>
+                <div class="experience-list">
+                </div>
+            </div>
+
+            <div class="section" id="projects">
+                <h2>Projects</h2>
+            </div>
+
+            <div class="section" id="education">
+                <h2>Education</h2>
+            </div>
+
+            <div class="section" id="contact">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+                <div id="thank-you-message" style="display:none;">
+                    <p>Thank you for your message!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> <span id="footer-name"></span>. All Rights Reserved.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; <span id="current-year"></span> <span id="footer-name"></span>. All Rights Reserved.</p>
-    </footer>
 
     <script src="src/scripts/script.js"></script>
 </body>
