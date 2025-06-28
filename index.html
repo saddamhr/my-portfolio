@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="myTopnav" class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#find-me-online">Find Me Online</a></li>
+            <li><a href="javascript:void(0);" id="theme-switcher"><i class="fa fa-moon-o"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header id="dynamic-header">
+        </header>
+
+        <div class="section" id="about">
+            <h2>About Me</h2>
+            <p id="about-content"></p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>Skills</h2>
+            <ul id="skills-list">
+            </ul>
+        </div>
+
+        <div class="section" id="experience">
+            <h2>Experience</h2>
+        </div>
+
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+        </div>
+
+        <div class="section" id="education">
+            <h2>Education</h2>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="thank-you-message" style="display:none;">
+                <p>Thank you for your message!</p>
+            </div>
+        </div>
+
+        <div class="section social-links" id="find-me-online">
+            <h2>Find Me Online</h2>
+            <div class="social-icons">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> <span id="footer-name"></span>. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
